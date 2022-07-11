@@ -1,25 +1,22 @@
 # api_final
-api final
-Yatube API
-Цель проекта Yatube API:
-Создание API сервиса для авторского блогинга с возможностью создавать посты, комментировать посты, создавать тематические группы, подписываться на понравившихся авторов.
 
 Как запустить проект:
 Клонировать репозиторий и перейти в него в командной строке:
 
-git clone https://github.com/AliaksandrMysleika/api_final_yatube.git
-cd api_final_yatube
+git clone https://github.com/redbull7214/api_final_yatube.git
+cd api_final_yatube 
 Cоздать и активировать виртуальное окружение:
 
-python3 -m venv env
-source env/bin/activate
+python -m venv venv
+source venv/Scripts/activate 
+python -m pip install --upgrade pip
+
 Установить зависимости из файла requirements.txt:
-
-python3 -m pip install --upgrade pip
 pip install -r requirements.txt
+
 Выполнить миграции:
+python manage.py migrate
 
-python3 manage.py migrate
 Запустить проект:
-
-python3 manage.py runserver
+cd yatube_api
+python manage.py runserver
